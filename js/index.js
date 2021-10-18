@@ -18,18 +18,18 @@ canvas.width = canvasWidth
 canvas.height = canvasHeight
 
 
-let tFlower = new Image()
-let bFlower = new Image()
+// let tFlower = new Image()
+// let bFlower = new Image()
 
-tFlower.onload = function(){
-    ctx.drawImage(tFlower, -100 ,-150 , 570, 460)
-}
-tFlower.src = "../imgs/top-right-flowers.svg"
+// tFlower.onload = function(){
+//     ctx.drawImage(tFlower, -100 ,-150 , 570, 460)
+// }
+// tFlower.src = "../imgs/top-right-flowers.svg"
 
 
-bFlower.onload = ()=>{
-    ctx.drawImage(bFlower, -90, 640 , 459,492)
-}
+// bFlower.onload = ()=>{
+//     ctx.drawImage(bFlower, -90, 640 , 459,492)
+// }
 
-bFlower.src = "../imgs/bottom-left-flowers.svg"
+// bFlower.src = "../imgs/bottom-left-flowers.svg"
 

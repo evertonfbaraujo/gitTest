@@ -1,0 +1,24 @@
+{
+  "name": "gittest",
+  "version": "1.0.0",
+  "description": "Apenas um teste",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evertonfbaraujo/gitTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evertonfbaraujo/gitTest/issues"
+  },
+  "homepage": "https://github.com/evertonfbaraujo/gitTest#readme",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "gsap": "^3.8.0",
+    "pixi.js": "^6.1.3"
+  }
+}

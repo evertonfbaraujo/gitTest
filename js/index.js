@@ -1,33 +1,43 @@
-// window.onload =  sysFunc();
+var canvasWidth = document.querySelector(".container").offsetWidth;
+var canvasHeight = document.querySelector(".container").offsetHeight;
+const app = new PIXI.Application({
+  width: canvasWidth,
+  height: canvasHeight,
+  backgroundColor: 0x1099bb,
+});
+document.getElementById("container").appendChild(app.view);
 
-// function sysFunc(){
-//    var sys = window.navigator.userAgent
-//    let sysWow
+const container = new PIXI.Container();
 
-//    if(sys.indexOf('Windows NT 10.0') > -1){
-//        sysWow = 'Windows'
-//        console.log(sysWow)
-//    }else{
-//        document.write( sysWow = sys)
-//    }
-let canvas = document.getElementById('myCanvas')
-let ctx = canvas.getContext('2d')
-var canvasWidth =  document.querySelector('.container').offsetWidth
-var canvasHeight =  document.querySelector('.container').offsetHeight
-canvas.width = canvasWidth
-canvas.height = canvasHeight
-let tFlower = new Image()
-let bFlower = new Image()
+app.stage.addChild(container);
 
-tFlower.onload = function(){
-    ctx.drawImage(tFlower, -100 ,-150 , 570, 460)
-}
-tFlower.src = "../imgs/top-right-flowers.svg"
+// Create a new texture
+const texture = [
+ tf = PIXI.Texture.from("../imgs/top-right-flowers.svg"),
+ wf = PIXI.Texture.from("../imgs/little-flower.svg")
+]
+// const texture = ;
+
+const tF = new PIXI.Sprite(texture[0]);
+tF.anchor.set(0.5);
+tF.x = 190;
+tF.y = 50;
+container.addChild(tF);
+
+let fls = new PIXI.Sprite(PIXI.Texture.from("../imgs/flower-left-side.png"))
+fls.x = 0
+fls.y = 380
+fls.anchor.set(0.5)
+
+let florzinha = new PIXI.Sprite(texture[1]);
+florzinha.anchor.set(0.5)
+florzinha.x = 100;
+florzinha.y = 500;
 
 
-bFlower.onload = ()=>{
-    ctx.drawImage(bFlower, -90, 640 , 459,492)
-}
+container.addChild(florzinha, fls);
 
-bFlower.src = "../imgs/bottom-left-flowers.svg"
+app.ticker.add((delta) => {
 
+  florzinha.rotation += 0.02 * delta;
+});

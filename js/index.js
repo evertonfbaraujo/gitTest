@@ -21,6 +21,8 @@ const texture = [
    (lsf = PIXI.Texture.from("../imgs/flower-left-side.png")),
   //Bottom Flowers
   (bf = PIXI.Texture.from("../imgs/bottom-left-flowers.svg")),
+  //Brown Flower
+  (lbf = PIXI.Texture.from("../imgs/little-brown-flower.svg")),
 ];
 // const texture = ;
 
@@ -45,8 +47,13 @@ let blf =  new PIXI.Sprite(texture[3])
 blf.y =  parseInt(canvasHeight*68/100)
 blf.x =  -90
 
+let lbf1 = new PIXI.Sprite(texture[4])
+lbf1.x = 100
+lbf1.y = parseInt(canvasHeight/2)
+lbf1.anchor.set(0.5)
 
-container.addChild(tF,florzinha, fls,blf);
+
+container.addChild(tF,florzinha,fls,blf,lbf1);
 
 app.ticker.add((delta) => {
   florzinha.rotation += 0.02 * delta;

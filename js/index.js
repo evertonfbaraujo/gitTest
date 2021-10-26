@@ -12,13 +12,6 @@ const container = new PIXI.Container();
 app.stage.addChild(container);
 
 const texture = [
-<<<<<<< HEAD
- trf = PIXI.Texture.from("../imgs/top-right-flowers.svg"),
- wf = PIXI.Texture.from("../imgs/little-flower.svg"),
- blf = PIXI.Texture.from("../imgs/little-flower.svg"),
- lbf = PIXI.Texture.from("../imgs/little-brown-flower.svg"),
-]
-=======
   // Top Flowers
   (tf = PIXI.Texture.from("../imgs/top-right-flowers.svg")),
   //Little white Flower
@@ -32,7 +25,6 @@ const texture = [
 ];
 // const texture = ;
 
->>>>>>> 9547f23701e1c7dc78808b5b7808a587bd400b28
 const tF = new PIXI.Sprite(texture[0]);
 tF.anchor.set(0.5);
 tF.x = 190;
@@ -48,28 +40,17 @@ florzinha.anchor.set(0.5);
 florzinha.x = 100;
 florzinha.y = 500;
 
-<<<<<<< HEAD
-let botF = new PIXI.Sprite(texture[2])
-botF.x = 100
-botF.y = 100
-=======
 let blf = new PIXI.Sprite(texture[3]);
 blf.y = parseInt((canvasHeight * 65) / 100);
 blf.x = -90;
->>>>>>> 9547f23701e1c7dc78808b5b7808a587bd400b28
 
 let lbf1 = new PIXI.Sprite(texture[4]);
 lbf1.x = 100;
 lbf1.y = parseInt(canvasHeight / 2);
 lbf1.anchor.set(0.5);
 
-<<<<<<< HEAD
-app.ticker.add((delta) => {
-  florzinha.rotation += 0.01 * delta;
-=======
 container.addChild(tF, florzinha, fls, blf, lbf1);
 
 app.ticker.add((delta) => {
   florzinha.rotation += 0.02 * delta;
->>>>>>> 9547f23701e1c7dc78808b5b7808a587bd400b28
 });

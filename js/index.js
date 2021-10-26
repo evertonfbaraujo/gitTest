@@ -13,11 +13,11 @@ app.stage.addChild(container);
 
 // Create a new texture
 const texture = [
- tf = PIXI.Texture.from("../imgs/top-right-flowers.svg"),
- wf = PIXI.Texture.from("../imgs/little-flower.svg")
+ trf = PIXI.Texture.from("../imgs/top-right-flowers.svg"),
+ wf = PIXI.Texture.from("../imgs/little-flower.svg"),
+ blf = PIXI.Texture.from("../imgs/little-flower.svg"),
+ lbf = PIXI.Texture.from("../imgs/little-brown-flower.svg"),
 ]
-// const texture = ;
-
 const tF = new PIXI.Sprite(texture[0]);
 tF.anchor.set(0.5);
 tF.x = 190;
@@ -34,10 +34,12 @@ florzinha.anchor.set(0.5)
 florzinha.x = 100;
 florzinha.y = 500;
 
+let botF = new PIXI.Sprite(texture[2])
+botF.x = 100
+botF.y = 100
 
 container.addChild(florzinha, fls);
 
 app.ticker.add((delta) => {
-
-  florzinha.rotation += 0.02 * delta;
+  florzinha.rotation += 0.01 * delta;
 });

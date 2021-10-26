@@ -11,7 +11,6 @@ const container = new PIXI.Container();
 
 app.stage.addChild(container);
 
-// Create a new texture
 const texture = [
  trf = PIXI.Texture.from("../imgs/top-right-flowers.svg"),
  wf = PIXI.Texture.from("../imgs/little-flower.svg"),

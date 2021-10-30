@@ -1,3 +1,4 @@
+
 var canvasWidth = document.querySelector(".container").offsetWidth;
 var canvasHeight = document.querySelector(".container").offsetHeight;
 const app = new PIXI.Application({

@@ -12,6 +12,9 @@ canvas {
   background-color: blueviolet;
   z-index: -1;
 }
+section {
+  width: 100%;
+}
 .flower1 {
   position: absolute;
   height: 10px;
@@ -23,6 +26,7 @@ canvas {
   display: grid;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 300px;
 }
 .content1 {
   color: #000000;
@@ -182,7 +186,7 @@ canvas {
 }
 .nav__menu {
   display: grid;
-  /* bottom: 0; */
+  bottom: 0;
   position: fixed;
   height: 50px;
   width: 100%;
@@ -194,6 +198,7 @@ canvas {
 .menu {
   display: grid;
   grid-auto-flow: column;
+  column-gap: 15px;
 }
 .menu__item {
   display: grid;

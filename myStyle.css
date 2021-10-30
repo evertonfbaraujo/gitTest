@@ -193,7 +193,6 @@ canvas {
 }
 .menu {
   display: grid;
-  height: 50px;
   grid-auto-flow: column;
 }
 .menu__item {

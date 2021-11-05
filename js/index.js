@@ -1,10 +1,9 @@
-
 var canvasWidth = document.querySelector(".container").offsetWidth;
 var canvasHeight = document.querySelector(".container").offsetHeight;
 const app = new PIXI.Application({
   width: canvasWidth,
   height: canvasHeight + 10,
-  backgroundColor: 0x1099bb,
+  backgroundColor: 0xf4ece9,
 });
 document.getElementById("container").appendChild(app.view);
 

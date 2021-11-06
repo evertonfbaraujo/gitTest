@@ -103,7 +103,7 @@ canvas {
 }
 .grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 0.3fr 1fr;
 }
 .dmy {
   display: grid;
@@ -114,7 +114,7 @@ canvas {
   margin-left: 10px;
   align-self: end;
   font-family: Italiana;
-  font-size: 1.8em;
+  font-size: 2.2em;
 }
 .dmy .year {
   align-self: start;
@@ -130,7 +130,8 @@ canvas {
   margin: 0 20px 0 20px;
 }
 .after {
-  width: 13px;
+  align-self: center;
+  justify-self: center;
 }
 .hour {
   display: grid;
@@ -141,7 +142,7 @@ canvas {
   justify-self: center;
   align-self: end;
   font-family: Italiana;
-  font-size: 1.8em;
+  font-size: 2.2em;
 }
 .hour .hours {
   justify-self: center;

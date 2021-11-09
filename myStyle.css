@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Charm&family=Italianno&family=Pinyon+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Italiana&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -97,9 +98,31 @@ canvas {
   text-align: center;
 }
 .dia {
-  font-family: "Bilbo Swash Caps", cursive;
-  font-size: 5em;
+  position: relative;
+  font-family: "Bebas Neue", cursive;
+  font-size: 6em;
   align-self: center;
+}
+.dia::before {
+  content: " ";
+  background-image: url("./imgs/flor-data.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 62px;
+  height: 86px;
+  transform: scaleX(-1);
+  left: -5px;
+  top: 25px;
+}
+.dia::after {
+  content: " ";
+  background-image: url("./imgs/flor-data.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 62px;
+  height: 86px;
+  right: -10px;
+  top: 25px;
 }
 .grid-2 {
   display: grid;
@@ -192,4 +215,118 @@ canvas {
   width: 49px;
   height: 50px;
   align-content: center;
+}
+.alerta {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.quadro {
+  position: absolute;
+  display: grid;
+  width: 300px;
+  border-radius: 14px;
+  background-color: rgba(242, 242, 242, 0.8);
+  animation-delay: 0.5s;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.qtitle {
+  justify-self: center;
+  font-size: 17px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #a40000;
+  padding-top: 20px;
+}
+.qdiscricao {
+  width: 278px;
+  padding: 3px 0 20px 0;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  text-align: center;
+  justify-self: center;
+}
+.qbtn {
+  text-align: center;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  padding: 12px 0 10px 0;
+  border-top: 1px #ccc solid;
+  color: rgb(41, 151, 255);
+}
+
+.pulse {
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+.fadeInDownBig {
+}
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }

@@ -265,6 +265,7 @@ canvas {
   justify-self: center;
 }
 .qbtn {
+  cursor: pointer;
   text-align: center;
   width: 100%;
   font-family: "Lato", sans-serif;

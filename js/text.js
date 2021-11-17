@@ -22,6 +22,10 @@ class Scketh {
   sizeScreen() {
     if (this.width >= 768) {
       this.tF.x = parseInt((this.width * 75) / 100);
+      // this.
+    }
+    if (this.width <= 411) {
+      this.florLateral.x = this.width + 20;
     }
   }
   add() {
@@ -32,11 +36,11 @@ class Scketh {
     this.tF.x = 190;
     this.tF.y = 50;
 
-    let blf = new PIXI.Sprite(
+    this.blf = new PIXI.Sprite(
       PIXI.Texture.from("../imgs/bottom-left-flowers.svg")
     );
-    blf.y = parseInt((this.height * 72) / 100);
-    blf.x = -90;
+    this.blf.y = parseInt((this.height * 72) / 100);
+    this.blf.x = -90;
 
     this.fls = new PIXI.Sprite(
       PIXI.Texture.from("../imgs/flower-left-side.png")
@@ -44,7 +48,14 @@ class Scketh {
     this.fls.x = 0;
     this.fls.y = 380;
     this.fls.anchor.set(0.5);
-    this.app.stage.addChild(this.tF, blf, this.fls);
+
+    this.florLateral = new PIXI.Sprite(
+      PIXI.Texture.from("../imgs/flor_lado.png")
+    );
+    this.florLateral.x = this.width;
+    this.florLateral.y = 600;
+    this.florLateral.rotation = 2.1;
+    this.florLateral.anchor.set(0.5);
   }
   add2() {
     const WIDTH = this.width;
@@ -92,6 +103,7 @@ class Scketh {
   }
   render() {
     this.app.ticker.add((delta) => {});
+    this.app.stage.addChild(this.tF, this.blf, this.fls, this.florLateral);
   }
 }
 

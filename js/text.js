@@ -29,6 +29,8 @@ class Scketh {
     }
   }
   add() {
+    let dataLP = parseInt(document.querySelector(".grid-1").offsetLeft);
+    let dataTP = parseInt(document.querySelector(".grid-1").offsetTop);
     this.tF = new PIXI.Sprite(
       PIXI.Texture.from("../imgs/top-right-flowers.svg")
     );
@@ -65,8 +67,16 @@ class Scketh {
     this.florbranca.scale.x = 0;
     this.florbranca.rotation = 0;
     this.florbranca.scale.y = 0;
-    this.florbranca.x = document.querySelector(".grid-1").offsetLeft + 20;
-    this.florbranca.y = document.querySelector(".grid-1").offsetTop + 75;
+    this.florbranca.x = dataLP + 20;
+    this.florbranca.y = dataTP + 75;
+
+    this.flormarron = new PIXI.Sprite(
+      PIXI.Texture.from("../imgs/brown_flor.png")
+    );
+    this.flormarron.x = dataLP + 60;
+    this.flormarron.y = dataTP + 22;
+    this.flormarron.anchor.set(0.5);
+    this.flormarron.rotation = 0;
   }
   add2() {
     const WIDTH = this.width;
@@ -134,7 +144,8 @@ class Scketh {
       this.blf,
       this.fls,
       this.florLateral,
-      this.florbranca
+      this.florbranca,
+      this.flormarron
     );
   }
 }

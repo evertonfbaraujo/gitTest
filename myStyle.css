@@ -217,7 +217,7 @@ canvas {
   align-content: center;
 }
 .alerta {
-  display: none;
+  display: block;
   position: fixed;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);

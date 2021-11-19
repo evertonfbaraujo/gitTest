@@ -73,9 +73,12 @@ class Scketh {
     this.flormarron = new PIXI.Sprite(
       PIXI.Texture.from("../imgs/brown_flor.png")
     );
-    this.flormarron.x = dataLP + 60;
-    this.flormarron.y = dataTP + 22;
-    this.flormarron.anchor.set(0.5);
+    this.flormarron.x = dataLP + 110;
+    this.flormarron.y = dataTP + 45;
+    this.flormarron.alpha = 0;
+    this.flormarron.scale.x = 0.3;
+    this.flormarron.scale.y = 0.3;
+    this.flormarron.anchor.set(0.5, 0.5);
     this.flormarron.rotation = 0;
   }
   add2() {
@@ -124,18 +127,29 @@ class Scketh {
   }
   render() {
     let tl = gsap.timeline({
-      defaults: { duration: 2, repeat: -1, yoyo: true },
+      defaults: { repeat: -1, yoyo: true },
     });
     tl.to(this.florbranca.scale, {
       x: 2.0,
       y: 2.0,
+      duration: 2,
     });
+    tl.to(this.flormarron.scale, {
+      x: 1.5,
+      y: 1.5,
+      duration: 2,
+    });
+
     let tlShow = gsap.timeline({
       defaults: { duration: 2, repeat: -1, yoyo: true },
     });
-    tlShow.to(this.florbranca, {
-      alpha: 1,
-    });
+    tlShow
+      .to(this.florbranca, {
+        alpha: 1,
+      })
+      .to(this.flormarron, {
+        alpha: 1,
+      });
     this.app.ticker.add((delta) => {
       this.florbranca.rotation -= 0.009 * delta;
     });

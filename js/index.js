@@ -11,5 +11,5 @@ var modal = document.querySelector(".alerta");
 var closeBtn = document.querySelector(".close");
 
 closeBtn.onclick = () => {
-  modal.style.display = "none";
+  modal.style.display = "none2";
 };
